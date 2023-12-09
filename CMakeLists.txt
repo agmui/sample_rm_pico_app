@@ -33,7 +33,8 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(${PROJECT_NAME} main.cpp )
+#file(GLOB_RECURSE source_list "src/*.cpp" "src/*.hpp")
+add_executable(${PROJECT_NAME} src/main.cpp)
 
 pico_set_program_name(${PROJECT_NAME} "pico_app")
 pico_set_program_version(${PROJECT_NAME} "0.1")
@@ -43,10 +44,19 @@ pico_enable_stdio_usb(${PROJECT_NAME} 1)
 
 add_subdirectory(rm_pico_dev)
 
+target_sources(${PROJECT_NAME}
+      PRIVATE
+        src/Core.h
+        src/TurretController.h
+        src/TurretController.cpp
+        src/DriveTrainController.h
+        src/DriveTrainController.cpp
+)
+
+
 # Add the standard library to the build
 target_link_libraries(${PROJECT_NAME}
-        rm_pico_dev)
-
+            rm_pico_dev)
 
 # Add the standard include files to the build
 target_include_directories(${PROJECT_NAME} PRIVATE

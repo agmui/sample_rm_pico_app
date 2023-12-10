@@ -41,7 +41,17 @@ if(-not($chocoexists)){
 refreshenv # to update enviromen vars
 
 # mingw contains gcc and python3.9
-choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' git vscode gcc-arm-embedded mingw ninja
+choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' git vscode gcc-arm-embedded mingw ninja# libusbdotnet
+
+# git clone https://github.com/raspberrypi/picotool.git
+
+# cd picotool-master
+# mkdir build
+# cd build
+# cmake -G "NMake Makefiles" ..
+# nmake
+
+# cd ../../
 
 refreshenv # to update enviromen vars
 

@@ -1,172 +1,187 @@
 {
   "version": 1,
-  "author": "Uri Shaked",
+  "author": "Anonymous maker",
   "editor": "wokwi",
   "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 73.65, "left": 570, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 391.6, "left": 566.4, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": 77.03, "left": 422.47, "attrs": {} },
+    { "type": "chip-dji-reciver", "id": "chip1", "top": 221.82, "left": 273.6, "attrs": {} },
     {
-      "type": "wokwi-pi-pico",
-      "id": "pico",
-      "top": 73.9,
-      "left": 132.55,
-      "rotate": 90
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r1",
-      "top": 86,
-      "left": 172.8,
-      "attrs": { "value": "1000" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": 54,
-      "left": 138.2,
-      "attrs": { "color": "red" }
-    },
-
-    {
-      "type": "chip-dji-remote",
-      "id": "chip1",
-      "top": 395.22,
-      "left": 270,
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -48.6,
+      "left": 43.8,
       "attrs": {}
     },
     {
       "type": "wokwi-analog-joystick",
-      "id": "left_joystick",
-      "top": 171.27,
-      "left": 99.6,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-analog-joystick",
-      "id": "right_joystick",
-      "top": 171.8,
-      "left": 427.13,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gnd",
-      "id": "gnd1",
-      "top": 290.97,
-      "left": 161.33,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gnd",
-      "id": "gnd2",
-      "top": 312.57,
-      "left": 488.93,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-gnd",
-      "id": "gnd3",
-      "top": 429.24,
-      "left": 409.6,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-vcc",
-      "id": "vcc1",
-      "top": 297.3,
-      "left": 110.53,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-vcc",
-      "id": "vcc2",
-      "top": 302.91,
-      "left": 432.13,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-vcc",
-      "id": "vcc3",
-      "top": 423.13,
-      "left": 393.05,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-logic-analyzer",
-      "id": "logic1",
-      "top": 405.36,
-      "left": 449.98,
+      "id": "joystick2",
+      "top": -48.6,
+      "left": -311.4,
       "attrs": {}
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "up_left",
-      "top": 109.76,
-      "left": -93.87,
-      "attrs": { "color": "green", "bounce": "0", "key": "1" }
+      "id": "btn1",
+      "top": -137.8,
+      "left": -28.8,
+      "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "mid_left",
-      "top": 110,
-      "left": 4.04,
-      "attrs": { "color": "green", "bounce": "0", "key": "2" }
+      "id": "btn2",
+      "top": -137.8,
+      "left": 192,
+      "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "down_left",
-      "top": 110,
-      "left": 84.14,
-      "attrs": { "color": "green", "bounce": "0", "key": "3" }
+      "id": "btn3",
+      "top": -137.8,
+      "left": 86.4,
+      "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "up_right",
-      "top": 110,
-      "left": 363.96,
-      "attrs": { "color": "green", "bounce": "0", "key": "7" }
+      "id": "btn4",
+      "top": -137.8,
+      "left": -384,
+      "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "mid_right",
-      "top": 110,
-      "left": 457.22,
-      "attrs": { "color": "green", "bounce": "0", "key": "8" }
+      "id": "btn5",
+      "top": -137.8,
+      "left": -268.8,
+      "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "mid_down",
-      "top": 110,
-      "left": 535.61,
-      "attrs": { "color": "green", "bounce": "0", "key": "9" }
-    }
+      "id": "btn6",
+      "top": -137.8,
+      "left": -182.4,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 77.56, "left": -288, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc2", "top": 77.56, "left": 67.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 86.4, "left": -250.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": 96, "left": 105, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": -163.2, "left": -317.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd3", "top": -163.2, "left": -202.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd5", "top": -163.2, "left": -115.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd6", "top": -163.2, "left": 37.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd7", "top": -163.2, "left": 153, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd8", "top": -163.2, "left": 258.6, "attrs": {} },
+    {
+      "type": "wokwi-led-bar-graph",
+      "id": "bargraph1",
+      "top": 4.8,
+      "left": 696,
+      "attrs": { "color": "lime" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc3", "top": 58.36, "left": 518.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd9", "top": 259.2, "left": 412.2, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd10", "top": 268.8, "left": 527.4, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc4", "top": 231.16, "left": 422.4, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc5", "top": 413.56, "left": 518.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd11", "top": 460.8, "left": 537, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 291.82, "left": 655.12, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc6", "top": 250.36, "left": 720, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd12", "top": 249.6, "left": 709.8, "attrs": {} },
+    { "type": "chip-dji-motors", "id": "chip2", "top": 202.62, "left": 744, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -265.19,
+      "left": 989.23,
+      "attrs": { "size": "17", "arrow": "orange" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper2",
+      "top": -265.19,
+      "left": 1210.03,
+      "attrs": { "size": "17", "arrow": "orange" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper3",
+      "top": 3.61,
+      "left": 989.23,
+      "attrs": { "size": "17", "arrow": "orange" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper4",
+      "top": 3.61,
+      "left": 1210.03,
+      "attrs": { "size": "17", "arrow": "orange" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc7", "top": 163.96, "left": 720, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd13", "top": 182.4, "left": 700.2, "attrs": {} }
   ],
   "connections": [
-    ["pico:GP0", "$serialMonitor:RX", "", []],
-    ["pico:GP1", "$serialMonitor:TX", "", []],
-    ["pico:GP2", "r1:2", "green", ["v0"]],
-    ["r1:1", "led1:A", "green", ["v0"]],
-    ["pico:GND.3", "led1:C", "black", ["v-19.2", "h9.6"]],
-    ["left_joystick:GND", "gnd1:GND", "black", ["v0"]],
-    ["chip1:GND", "gnd3:GND", "black", ["h0"]],
-    ["left_joystick:VCC", "vcc1:VCC", "red", ["v0"]],
-    ["vcc2:VCC", "right_joystick:VCC", "red", ["v2.45", "h44.4"]],
-    ["left_joystick:SEL", "vcc1:VCC", "red", ["v0"]],
-    ["right_joystick:SEL", "vcc2:VCC", "red", ["v0"]],
-    ["left_joystick:VERT", "chip1:Left_virt_joy", "green", ["v0"]],
-    ["left_joystick:HORZ", "chip1:Left_horz_joy", "green", ["v0"]],
-    [
-      "right_joystick:VERT",
-      "chip1:Right_horz_joy",
-      "gold",
-      ["v21.8", "h-229.23", "v123.2"]
-    ],
-    [
-      "right_joystick:HORZ",
-      "chip1:Right_virt_joy",
-      "gold",
-      ["v31.8", "h-223.5", "v103.6"]
-    ],
-    ["vcc3:VCC", "chip1:VCC", "red", ["v0"]],
-    ["logic1:D0", "chip1:TX", "green", ["h0"]],
-    ["gnd3:GND", "logic1:GND", "black", ["v0"]],
-    ["gnd2:GND", "right_joystick:GND", "black", ["v0"]]
-  ]
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "joystick2:VERT", "chip1:Left_virt_joy", "green", [ "v0" ] ],
+    [ "joystick2:HORZ", "chip1:Left_horz_joy", "green", [ "v0" ] ],
+    [ "vcc1:VCC", "joystick2:VCC", "red", [ "v0" ] ],
+    [ "joystick1:VCC", "vcc2:VCC", "red", [ "v0" ] ],
+    [ "gnd1:GND", "joystick2:GND", "black", [ "v0" ] ],
+    [ "gnd2:GND", "joystick1:GND", "black", [ "v0" ] ],
+    [ "joystick1:VERT", "chip1:Right_virt_joy", "green", [ "v57.6", "h-259.2", "v57.6" ] ],
+    [ "joystick1:HORZ", "chip1:Right_horz_joy", "green", [ "v67.2", "h-278.4", "v57.6" ] ],
+    [ "gnd4:GND", "btn4:1.r", "black", [ "v0" ] ],
+    [ "gnd3:GND", "btn5:1.r", "black", [ "v0" ] ],
+    [ "gnd5:GND", "btn6:1.r", "black", [ "v0" ] ],
+    [ "gnd6:GND", "btn1:1.r", "black", [ "v0" ] ],
+    [ "gnd7:GND", "btn3:1.r", "black", [ "v-9.6" ] ],
+    [ "gnd8:GND", "btn2:1.r", "black", [ "v0" ] ],
+    [ "btn4:2.r", "chip1:Left_switch", "green", [ "h0.2", "v307.4" ] ],
+    [ "btn4:2.r", "chip1:Left_switch1", "orange", [ "h0.2", "v307.4" ] ],
+    [ "chip1:Left_switch2", "btn5:2.r", "orange", [ "h0" ] ],
+    [ "chip1:Left_switch3", "btn6:2.r", "orange", [ "h0" ] ],
+    [ "chip1:Right_switch1", "btn1:2.r", "orange", [ "h0" ] ],
+    [ "chip1:Right_switch2", "btn3:2.r", "orange", [ "h0" ] ],
+    [ "chip1:Right_switch3", "btn2:2.r", "orange", [ "h0" ] ],
+    [ "sd1:SCK", "pico:GP2", "green", [ "h0" ] ],
+    [ "sd1:CS", "pico:GP5", "green", [ "h0" ] ],
+    [ "sd1:DI", "pico:GP3", "green", [ "h48", "v-9.69" ] ],
+    [ "sd1:DO", "pico:GP4", "green", [ "h57.6", "v38.51" ] ],
+    [ "sd1:GND", "pico:GND.1", "black", [ "h0" ] ],
+    [ "vcc3:VCC", "sd1:VCC", "red", [ "v0" ] ],
+    [ "chip1:GND", "gnd9:GND", "black", [ "h0" ] ],
+    [ "gnd10:GND", "pico:GND.4", "black", [ "v-9.6", "h38.4" ] ],
+    [ "vcc4:VCC", "chip1:VCC", "red", [ "v0" ] ],
+    [ "pico:GP13", "chip1:TX", "green", [ "h-19.2", "v-57.6" ] ],
+    [ "pico:GP15", "servo1:PWM", "green", [ "h-19.2", "v115" ] ],
+    [ "gnd11:GND", "servo1:GND", "black", [ "v0" ] ],
+    [ "vcc5:VCC", "servo1:V+", "red", [ "v0" ] ],
+    [ "imu1:VCC", "vcc6:VCC", "red", [ "v0" ] ],
+    [ "gnd12:GND", "imu1:GND", "black", [ "v0" ] ],
+    [ "imu1:SDA", "pico:GP16", "green", [ "v0" ] ],
+    [ "imu1:SCL", "pico:GP17", "green", [ "v0" ] ],
+    [ "chip2:CANRX", "pico:GP19", "blue", [ "h0" ] ],
+    [ "chip2:CANTX", "pico:GP18", "blue", [ "h0" ] ],
+    [ "vcc7:VCC", "chip2:VCC", "red", [ "v0" ] ],
+    [ "gnd13:GND", "chip2:GND", "black", [ "v0" ] ],
+    [ "stepper1:A-", "chip2:motor1-Am", "green", [ "h-163.2", "v412.8" ] ],
+    [ "stepper1:A+", "chip2:motor1-Ap", "green", [ "v9.6", "h-163.2", "v393.6" ] ],
+    [ "stepper1:B+", "chip2:motor1-Bp", "green", [ "v19.2", "h-163.2", "v374.4" ] ],
+    [ "stepper1:B-", "chip2:motor1-Bm", "green", [ "v28.8", "h-163.21", "v355.2" ] ],
+    [ "chip2:motor2-Am", "stepper2:A-", "green", [ "h88.21", "v-355.2", "h326.4" ] ],
+    [ "chip2:motor2-Ap", "stepper2:A+", "green", [ "h97.81", "v-336", "h326.4" ] ],
+    [ "chip2:motor2-Bp", "stepper2:B+", "green", [ "h107.41", "v-316.8", "h326.4" ] ],
+    [ "chip2:motor2-Bm", "stepper2:B-", "green", [ "h117.01", "v-297.6", "h326.41" ] ],
+    [ "chip2:motor3-Am", "stepper3:A-", "green", [ "h0" ] ],
+    [ "chip2:motor3-Ap", "stepper3:A+", "green", [ "h0" ] ],
+    [ "chip2:motor3-Bp", "stepper3:B+", "green", [ "h0" ] ],
+    [ "chip2:motor3-Bm", "stepper3:B-", "green", [ "h0" ] ],
+    [ "chip2:motor4-Am", "stepper4:A-", "green", [ "h0" ] ],
+    [ "stepper4:A+", "chip2:motor4-Ap", "green", [ "v0" ] ],
+    [ "stepper4:B+", "chip2:motor4-Bp", "green", [ "v0" ] ],
+    [ "stepper4:B-", "chip2:motor4-Bm", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
 }

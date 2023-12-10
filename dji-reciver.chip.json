@@ -7,8 +7,14 @@
       "Right_virt_joy",
       "Right_horz_joy",
   
-      "Left_switch",
-      "Right_switch",
+      "Left_switch1",
+      "Left_switch2",
+      "Left_switch3",
+
+      "Right_switch1",
+      "Right_switch2",
+      "Right_switch3",
+
       "mouse",
       "keeb",
   
@@ -22,5 +28,9 @@
       "GND",
       "TX"
     ],
-    "controls": []
+    "controls": [],
+    "display": {
+      "width": 128,
+      "height": 64
+    }
   }

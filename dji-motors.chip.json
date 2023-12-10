@@ -1,0 +1,41 @@
+{
+    "name": "dji-motors",
+    "author": "",
+    "pins": [
+      "VCC",
+      "GND",
+      "CANRX",
+      "CANTX",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+  
+      "motor1-Am",
+      "motor1-Ap",
+      "motor1-Bp",
+      "motor1-Bm",
+      "motor2-Am",
+      "motor2-Ap",
+      "motor2-Bp",
+      "motor2-Bm",
+      "motor3-Am",
+      "motor3-Ap",
+      "motor3-Bp",
+      "motor3-Bm",
+      "motor4-Am",
+      "motor4-Ap",
+      "motor4-Bp",
+      "motor4-Bm"
+  
+    ],
+    "controls": []
+  }

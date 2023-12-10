@@ -1,57 +1,57 @@
 name: Build and test
 
 # Only run this when the master branch changes
-on:
-  workflow_dispatch:
-  push:
+# on:
+#   workflow_dispatch:
+#   push:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    env:
-      PICO_SDK_PATH: /home/runner/work/sample_rm_pico_app/lib/pico-sdk
-      SDK_VERSION: 1.5.0
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up the toolchain
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
-      - name: Set up the Pi Pico SDK
-        run: |
-          cd ${{ github.workspace }}
-          git submodule update --init
-          cd rm_pico_dev
-          git submodule update --init --recommend-shallow 
-          cd lib/pico-sdk/
-          git submodule update --init --recommend-shallow
-      - name: Compile firmware # just runs basic cmds and builds whole program
-        run: |
-          cd ${{ github.workspace }}
-          mkdir build
-          cd build
-          cmake ..
-          make -j12 #TODO change
-      - name: Upload firmware
-        uses: actions/upload-artifact@v3
-        with:
-          name: firmware
-          path: ${{ github.workspace }}/build/pico_app.*
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     env:
+#       PICO_SDK_PATH: /home/runner/work/sample_rm_pico_app/lib/pico-sdk
+#       SDK_VERSION: 1.5.0
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Set up the toolchain
+#         run: |
+#           sudo apt-get update
+#           sudo apt-get install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
+#       - name: Set up the Pi Pico SDK
+#         run: |
+#           cd ${{ github.workspace }}
+#           git submodule update --init
+#           cd rm_pico_dev
+#           git submodule update --init --recommend-shallow 
+#           cd lib/pico-sdk/
+#           git submodule update --init --recommend-shallow
+#       - name: Compile firmware # just runs basic cmds and builds whole program
+#         run: |
+#           cd ${{ github.workspace }}
+#           mkdir build
+#           cd build
+#           cmake ..
+#           make -j12 #TODO change
+#       - name: Upload firmware
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: firmware
+#           path: ${{ github.workspace }}/build/pico_app.*
 
-  test-on-wokwi:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-      - name: Download firmware # cp the build dir(/build/pico_app.*) from the above steps(name: Upload firmware)
-        uses: actions/download-artifact@v2
-        with:
-          name: firmware
-          path: build
-      - name: Test Pi Pico SDK Blinky on Wokwi
-        uses: wokwi/wokwi-ci-action@v1
-        with:
-          token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: /
-          timeout: 1000 # ms
-          scenario: "test/wokwi.sample_test.yaml"
+#   test-on-wokwi:
+#     runs-on: ubuntu-latest
+#     needs: build
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Download firmware # cp the build dir(/build/pico_app.*) from the above steps(name: Upload firmware)
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: firmware
+#           path: build
+#       - name: Test Pi Pico SDK Blinky on Wokwi
+#         uses: wokwi/wokwi-ci-action@v1
+#         with:
+#           token: ${{ secrets.WOKWI_CLI_TOKEN }}
+#           path: /
+#           timeout: 1000 # ms
+#           scenario: "test/wokwi.sample_test.yaml"

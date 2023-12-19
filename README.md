@@ -7,8 +7,7 @@ work in the [robomasters](https://robomasters-website.web.app/) competition.
 
 It uses the [rm_pico_dev](https://github.com/agmui/rm_pico_dev) library
 
-# Setup Guide
-[documentation website](https://agmui.github.io/rhit_docs.github.io/docs/getting_started/)
+# [Setup Guide](https://agmui.github.io/rhit_docs.github.io/docs/getting_started/)
 
 TODO:
 * linux reaload udev rules

@@ -20,23 +20,7 @@
 		{
 			"type": "shell",
 			"label": "upload",
-			"command": "picotool load -f ${workspaceFolder}/build/pico_app.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/cli/input_and_output/input_and_output.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/cli/basic_shell/basic_shell.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/cli/basic_cmd/basic_cmd.uf2",
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/cli/add_cmd/add_cmd.uf2"
-
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/remote/dbus/dbus.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/remote/irq_uart/irq_uart.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/remote/taproot_remote/taproot_remote.uf2"
-
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/sd_card/cli_sd_card/*.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/sd_card/no-OS-FatFS-SD-lib/*.uf2"
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/sd_card/save_load_files/*.uf2"
-
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/motor/motor_demo.uf2"
-
-			// "command": "picotool load -f ${workspaceFolder}/build/rm_pico_dev/examples/pico_2_pico_demo/transmit/pico_transmit.uf2"
+			"command": "picotool load -f ${command:cmake.getLaunchTargetPath}",
 		},
 		{
 			"label": "open serial monitor",

@@ -38,6 +38,13 @@ if(-not($chocoexists)){
     Write-Output "Chocolatey is already installed"
 }
 
+# Make `refreshenv` available right away, by defining the $env:ChocolateyInstall
+# variable and importing the Chocolatey profile module.
+# Note: Using `. $PROFILE` instead *may* work, but isn't guaranteed to.
+$env:ChocolateyInstall = Convert-Path "$((Get-Command choco).Path)\..\.."   
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+
+
 refreshenv # to update enviromen vars
 
 # mingw contains gcc and python3.9

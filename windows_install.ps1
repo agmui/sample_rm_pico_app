@@ -25,7 +25,7 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 refreshenv # to update enviromen vars
 
 # mingw contains gcc and python3.9
-choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' git vscode gcc-arm-embedded mingw python ninja # libusbdotnet
+choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' git vscode gcc-arm-embedded mingw python38 ninja # libusbdotnet
 
 # git clone https://github.com/raspberrypi/picotool.git
 
